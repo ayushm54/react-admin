@@ -1,0 +1,66 @@
+@import "../../styles/responsive.scss";
+
+.top-box{
+    h1{
+        margin-bottom: 20px;
+
+        @include xxl{
+            font-size: 24px;
+        }
+    }
+
+    .list{
+        .list-item{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 30px;
+
+            .user{
+                display: flex;
+                gap: 20px;
+
+                img{
+                    width: 40px;
+                    height: 40px;
+                    object-fit: cover;
+                    border-radius: 50%;
+
+                    @include xxl{
+                        display: none;
+                    }
+
+                    @include lg{
+                        display: block;
+                    }
+                }
+
+                .user-text{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+                
+                    .user-name{
+                        font-weight: 500;
+                        font-size: 14px;
+                    }
+
+                    .user-email{
+                        font-size: 12px;
+
+                        @include xxl{
+                            display: none;
+                        }
+                        @include lg{
+                            display: block;
+                        }
+                    }
+                }
+            }
+
+            .amount{
+                font-weight: 500;
+            }
+        }
+    }
+}
